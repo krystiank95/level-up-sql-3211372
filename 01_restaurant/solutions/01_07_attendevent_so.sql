@@ -3,8 +3,8 @@
 -- The customer 'atapley2j@kinetecoinc.com' will be in
 -- attendance, and will bring 3 friends.
 
-INSERT INTO AnniversaryAttendees
-  (CustomerID, PartySize) 
+INSERT INTO list
+  (CustomerID, guests) 
 VALUES (
   (SELECT CustomerID 
     FROM Customers 

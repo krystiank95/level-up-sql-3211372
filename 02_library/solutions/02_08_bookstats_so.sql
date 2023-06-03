@@ -9,7 +9,7 @@
 SELECT Published, COUNT(DISTINCT(Title)) AS PubCount 
 FROM Books 
 GROUP BY Published
-ORDER BY PubCount DESC;
+ORDER BY published asc;
 
 SELECT COUNT(Loans.LoanID) AS LoanCount, Books.Title 
 FROM Loans 
@@ -17,3 +17,5 @@ JOIN Books ON Loans.BookID=Books.BookID
 GROUP BY Books.Title 
 ORDER BY LoanCount DESC 
 LIMIT 5;
+
+SELECT * FROM Books WHERE title like '%Frankenstein; Or, The Modern Prometheus%'
